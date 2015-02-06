@@ -17,6 +17,6 @@ RUN apt-get update &&\
 
 ADD https://raw.githubusercontent.com/JustinJudd/heka/dev/sandbox/lua/encoders/influxdb.lua /usr/share/heka/lua_encoders/influxdb.lua
 
-USER heka
+#USER heka
 ENTRYPOINT ["/usr/bin/hekad"]
 CMD ["-config=/etc/hekad/hekad.toml"]
